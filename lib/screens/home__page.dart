@@ -1,3 +1,4 @@
+import 'package:arifspot/components/location.dart';
 import 'package:flutter/material.dart';
 import 'package:arifspot/components/searchbar.dart' as custom;
 import 'package:arifspot/components/service__tag.dart';
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             SizedBox(height: 12),
             custom.SearchBar(),
-            SizedBox(height: 24),
+            SizedBox(height: 32),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -92,6 +93,11 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            SizedBox(height: 32),
+            //list location
+            Location(),
+
+            //popular places
           ],
         ),
       ),
