@@ -4,6 +4,7 @@ import 'package:arifspot/constants/color.dart';
 import 'package:flutter/material.dart';
 import 'package:arifspot/components/searchbar.dart' as custom;
 import 'package:arifspot/components/service__tag.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:iconsax/iconsax.dart';
 
 class HomePage extends StatefulWidget {
@@ -149,6 +150,36 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8),
+        child: GNav(
+          hoverColor: CustomColor.primary,
+          haptic: true,
+          activeColor: CustomColor.primary,
+          textStyle: TextStyle(color: CustomColor.white),
+
+          gap: 4,
+          tabBorderRadius: 8,
+          tabActiveBorder: Border.all(color: Colors.transparent, width: 1),
+          tabBorder: Border.all(color: Colors.transparent, width: 1),
+          tabShadow: [
+            BoxShadow(color: Colors.white.withAlpha(1), blurRadius: 4),
+          ],
+          curve: Curves.easeInOutCubicEmphasized,
+          duration: const Duration(milliseconds: 1),
+
+          color: CustomColor.secondary,
+
+          iconSize: 24,
+          tabBackgroundColor: CustomColor.primary.withAlpha(180),
+          tabs: [
+            GButton(icon: Iconsax.home, text: 'Home'),
+            GButton(icon: Iconsax.search_normal, text: 'Search'),
+            GButton(icon: Iconsax.heart, text: 'Favourite'),
+            GButton(icon: Iconsax.user, text: 'Profile'),
+          ],
         ),
       ),
     );

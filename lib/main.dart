@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         // scaffoldBackgroundColor: CustomColor.creamy,
       ),
       home: HomePage(),
+
       debugShowCheckedModeBanner: false,
     );
   }
